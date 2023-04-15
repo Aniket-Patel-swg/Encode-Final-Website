@@ -1,0 +1,31 @@
+.about-encode{
+    height: 80vh;
+    display: flex;
+}
+.about-encode-section{
+    padding: 3em;
+    display: flex;
+}
+.about-encode-section h1{
+    font-size: 2.5em;
+    font-weight: 800;
+}
+.about-encode-section p{
+    padding-left: 5em;
+    margin-left: 5em;
+    padding: 2em;
+}
+.left-section{
+    padding-top: 5em;
+}
+.right-section{
+    margin: auto;
+    padding-left: 3in;
+}
+.right-section h1{
+    /* padding: 1em; */
+    font-weight: 500;
+}
+.right-section ul{
+    list-style-type: disc;
+}

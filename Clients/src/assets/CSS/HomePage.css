@@ -1,0 +1,61 @@
+
+.hero-text-section{
+    padding: 3em;
+}
+.Homepage-container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #180033, #000000);
+}
+.hero-text-section{
+    padding: 5em;
+    padding-left: 7em;
+}
+.encode-text h1{
+    font-weight: 900;
+    font-size: 7.5em;
+    color: rgba(161, 14, 194, 0.7);
+}
+.encode-text h2{
+    font-size: 3em;
+    font-weight: 800;
+    /* margin-top: 1rem; */
+    color: rgb(129, 9, 172);
+}
+.encode-intro-text p{
+   padding-top: 0.5em;
+   font-size: 0.8em;
+   font-weight: 300;
+   color: #9d09e7;
+}
+.encode-text strong{
+    background: linear-gradient(to right,  #3744ff90, #8709e788);
+    /* background: linear-gradient(to right,  #008439, #00a6ff); */
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.1em;
+}
+.t-shirt-button{
+    padding-top: 1.4em;
+}
+.t-shirt-button button{
+    background: linear-gradient(to right, #5d0d9a, #2c0372);
+    padding: 1.5em;
+    border-radius: 0.5em;
+    color: white;
+}
+.t-shirt-button a{
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: 700;
+}
+.canvas-wrapper {
+    width: 800px;
+    height: 600px;
+    /* position: absolute; */
+  }
+  .canvas-wrapper canvas{
+    height: 100%;
+    width: 100%;
+  }

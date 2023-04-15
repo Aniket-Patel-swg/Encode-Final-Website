@@ -1,0 +1,7 @@
+.carousel-section img{
+    width: 50%;
+    height: 50vh;
+}
+.events-carousel{
+    display: flex;
+}
