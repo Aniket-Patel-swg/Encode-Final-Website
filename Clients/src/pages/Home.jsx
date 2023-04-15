@@ -9,7 +9,6 @@ import {
   headTextAnimation,
   slideAnimation
 } from '../config/motion';
-import SecondPage from './SecondPage';
 
 const Home = () => {
   const snap = useSnapshot(state);

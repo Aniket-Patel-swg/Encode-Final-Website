@@ -1,68 +1,65 @@
 import React from "react";
-import { motion } from "framer-motion";
 import "../assets/CSS/AboutEncode.css";
+import { useSpring, useScroll, animated } from 'react-spring';
 
 const AboutEncode = () => {
-  const sectionVariants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeInOut",
-        delay: 0.2,
-      },
-    },
-  };
+
+  const { scrollY } = useScroll();
+  const styles1 = useSpring({
+    opacity: scrollY.to(y => (y > 500 ? 1 : 0)),
+    transform: scrollY.to(y => (y > 500 ? 'translateY(0)' : 'translateY(20px)')),
+  });
+  const styles2 = useSpring({
+    background: scrollY.to(y => (y > 500 ? 'purple' : 'yellow')),
+    color: scrollY.to(y => (y > 500 ? '#fff' : '#000')),
+  });
+  const backgroundColor = useSpring({
+    background: scrollY.to(y => (y > 500 ? '#f1f1f1' : '#0c001a')),
+  });
 
   return (
-    <motion.div className="about-encode">
-      <motion.div
+    <animated.div className="about-encode" style={backgroundColor}>
+      <div
         className="about-encode-section"
-        variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
-        <div className="left-section">
+        <animated.div className="left-section" style={styles1}>
           <h1>Explore Encode Community</h1>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto,
             <br /> magni nostrum. Lorem ipsum dolor sit amet. <br /> quisquam!
             Eveniet voluptatibus.
           </p>
-        </div>
-        <div className="right-section">
-          <motion.section className="list-items">
-            <motion.h1
-              variants={sectionVariants}
+        </animated.div>
+        <animated.div className="right-section" style={styles2}>
+          <section className="list-items">
+            <h1
+
               initial="hidden"
               animate="visible"
             >
               Lorem ipsum dolor sit.
-            </motion.h1>
-            <motion.ul
-              variants={sectionVariants}
+            </h1>
+            <ul
+    
               initial="hidden"
               animate="visible"
             >
-              <motion.li variants={sectionVariants} initial="hidden" animate="visible">
+              <li  initial="hidden" animate="visible">
                 Lorem ipsum dolor sit amet.
-              </motion.li>
-              <motion.li variants={sectionVariants} initial="hidden" animate="visible">
+              </li>
+              <li  initial="hidden" animate="visible">
                 Lorem ipsum dolor sit.
-              </motion.li>
-              <motion.li variants={sectionVariants} initial="hidden" animate="visible">
+              </li>
+              <li initial="hidden" animate="visible">
                 Lorem ipsum dolor sit amet.
-              </motion.li>
-            </motion.ul>
-          </motion.section>
-        </div>
-      </motion.div>
-    </motion.div>
+              </li>
+            </ul>
+          </section>
+        </animated.div>
+      </div>
+    </animated.div>
   );
 };
 

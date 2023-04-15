@@ -3,7 +3,6 @@ import AboutEncode from './pages/AboutEncode';
 import Customizer from './pages/Customizer';
 import Home from './pages/Home';
 import HomePage from './pages/Homepage';
-import Secondpage from './pages/SecondPage';
 import UpcommingEvents from './pages/UpcommingEvents';
 
 function App() {
@@ -16,7 +15,6 @@ function App() {
       <Canvas />
       <Customizer /> */}
     </main>
-    {/* <Secondpage /> */}
     <UpcommingEvents />
     </>
   )

@@ -11,16 +11,12 @@ import { useSpring, animated } from "react-spring";
 const HomePage = () => {
   const springAnimation = useSpring({
     from: {
-      position: [45, 23, 87],
-      opacity: 0.5,
-      scale: [1, 1, 1],
+      opacity: 0,
     },
     to: {
-      position: [0, 0, 0],
       opacity: 1,
-      scale: [1.2, 1.2, 1.2],
     },
-    config: { duration: 1000 },
+    config: { duration: 2000 },
   });
   
 
@@ -88,7 +84,7 @@ const HomePage = () => {
           </div>
         </section>
         <section className="3d-model-section" style={springAnimation}>
-          <animated.div className="canvas-wrapper">
+          <animated.div className="canvas-wrapper" style={springAnimation}>
             <Canvas camera={{ position: [10, 25, 10] }}>
               <OrbitControls />
               <ambientLight intensity={1.5} />
